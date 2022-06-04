@@ -7,9 +7,12 @@ from datetime import datetime
 # QuickLog = QLPATH + "/quick.md"
 import ql_vars
 response = pymsgbox.prompt('What is on your mind?', title='quick_log')
-currentDT = datetime.now()
-TimeStamp = currentDT.strftime("%Y%m%d%H%M%S")
-HumanTime = currentDT.strftime("%A %B %Y at %-H:%M")
-f = open(ql_vars.QuickLog, "a")
-f.write(TimeStamp + " : " + HumanTime + " : " + response + "\n")
-f.close()
+if type(response) == str:
+	currentDT = datetime.now()
+	TimeStamp = currentDT.strftime("%Y%m%d%H%M%S")
+	HumanTime = currentDT.strftime("%A %B %Y at %-H:%M")
+	f = open(ql_vars.QuickLog, "a")
+	f.write(TimeStamp + " : " + HumanTime + " : " + response + "\n")
+	f.close()
+else:
+    sys.exit()

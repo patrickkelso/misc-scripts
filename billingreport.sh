@@ -1,4 +1,7 @@
 #!/bin/bash
+# Trust me this solves a problem.
+# Correlating account IDs from multiple files into a CSV for accounts Payable.
+
 set -euo pipefail
 
 ACCOUNTLIST="accounts"

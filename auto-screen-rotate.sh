@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Copied and modified from https://gist.github.com/mortie/e725d37a71779b18e8eaaf4f8a02bf5b 
-# Updated to hardcode screen and stylus details, (let's be honest, they won't change).
+# Updated to hardcode screen and stylus details, (let's be honest, they won't change (often)).
 
 # I have this script set to autostart in my i3 config
 

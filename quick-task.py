@@ -1,9 +1,14 @@
 #!/usr/bin/python
-# Adjust QuickLog to your file path
+# Fast script to capture a task.
+# The task is captured in a format that Obsidian.md will recognise.
+# 
+# Requires pymsgbox 
+# Create a file in the same directory as quick-task.py called ql_vars.py and set 'QuickTaskPath' appropriately. For example:
+# QuickTaskPATH = "/home/psk/quicktasks"
+#
+#
 import pymsgbox 
 from datetime import datetime
-# Create a file in the same directory as quick-task.py called ql_vars.py and set 'QLPATH' & 'QuickLog' appropriately. For example:
-# QuickTaskPATH = "/home/psk/quicktasks"
 import ql_vars
 currentDT = datetime.now()
 TimeStamp = currentDT.strftime("%Y%m%d%H%M%S")

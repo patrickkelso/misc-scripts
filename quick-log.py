@@ -1,10 +1,16 @@
 #!/usr/bin/python
-# Adjust QuickLog to your file path
-import pymsgbox 
-from datetime import datetime
-# Create a file in the same directory as ql.py called ql_vars.py and set 'QLPATH' & 'QuickLog' appropriately. For example:
+# Fast script to capture what I'm doing.
+# 
+# Create a file in the same directory as quick-log.py called ql_vars.py and set 'QLPATH' & 'QuickLog' appropriately. For example:
 # QLPATH = "/home/psk/quicklogs"
 # QuickLog = QLPATH + "/quick.md"
+#
+# Requires pymsgbox 
+#
+#
+
+import pymsgbox 
+from datetime import datetime
 import ql_vars
 response = pymsgbox.prompt('What is on your mind?', title='quick_log')
 if type(response) == str:

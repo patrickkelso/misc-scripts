@@ -13,12 +13,13 @@
 # The script depends on the monitor-sensor program from the iio-sensor-proxy package.
 
 # Use xrandr to verify this is your tablet monitor
-MONITOR=eDP1
+MONITOR=eDP-1
 
 # Configure these to match your hardware (names taken from `xinput` output).
 TOUCHPAD='TPPS/2 IBM TrackPoint'
 TOUCHSCREENp='Wacom Pen and multitouch sensor Pen stylus'
-TOUCHSCREENe='Wacom Pen and multitouch sensor Pen eraser'
+# Apparently this doesn't show up anymore... 
+#TOUCHSCREENe='Wacom Pen and multitouch sensor Pen eraser'
 TOUCHSCREENf='Wacom Pen and multitouch sensor Finger touch'
 
 monitor-sensor \
@@ -46,6 +47,6 @@ monitor-sensor \
 		echo $rotate
 		xrandr --output "$MONITOR" --rotate "$rotate"
 		xinput set-prop "$TOUCHSCREENp" --type=float "Coordinate Transformation Matrix" $matrix
-		xinput set-prop "$TOUCHSCREENe" --type=float "Coordinate Transformation Matrix" $matrix
+#		xinput set-prop "$TOUCHSCREENe" --type=float "Coordinate Transformation Matrix" $matrix
 		xinput set-prop "$TOUCHSCREENf" --type=float "Coordinate Transformation Matrix" $matrix
 	done
